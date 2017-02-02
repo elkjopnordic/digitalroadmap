@@ -14,6 +14,11 @@
 .image {
   color:#000000;
 }
+.placeholder {
+}
+.link_button {
+  color:#169BD5;
+}
 .heading_1 {
   font-family:'Arial Bold', 'Arial';
   font-weight:700;
@@ -56,6 +61,13 @@
 .paragraph {
   text-align:left;
 }
+.text_link {
+  color:#0000FF;
+}
+.text_link_mouse_over {
+}
+.text_link_mouse_down {
+}
 .text_field {
   color:#000000;
   text-align:left;
@@ -83,4 +95,6 @@
 }
 .sticky_3 {
   text-align:left;
+}
+.icon {
 }
