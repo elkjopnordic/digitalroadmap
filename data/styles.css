@@ -65,10 +65,22 @@
 }
 .flow_shape {
 }
+.tree_node {
+  text-align:left;
+}
 .html_button {
   color:#000000;
 }
 .vertical_line {
 }
 .connector {
+}
+.sticky_1 {
+  text-align:left;
+}
+.sticky_2 {
+  text-align:left;
+}
+.sticky_3 {
+  text-align:left;
 }
