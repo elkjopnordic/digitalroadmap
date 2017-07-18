@@ -17,7 +17,7 @@
   left:0px;
   top:0px;
   width:293px;
-  height:231px;
+  height:279px;
   background:inherit;
   background-color:rgba(242, 242, 242, 1);
   border:none;
@@ -31,7 +31,7 @@
   left:723px;
   top:214px;
   width:293px;
-  height:231px;
+  height:279px;
 }
 #u1 {
   position:absolute;
@@ -104,7 +104,7 @@
   left:0px;
   top:0px;
   width:294px;
-  height:560px;
+  height:620px;
   background:inherit;
   background-color:rgba(242, 242, 242, 1);
   border:none;
@@ -118,7 +118,7 @@
   left:1029px;
   top:212px;
   width:294px;
-  height:560px;
+  height:620px;
 }
 #u7 {
   position:absolute;
@@ -1415,7 +1415,7 @@
 #u94 {
   position:absolute;
   left:1040px;
-  top:735px;
+  top:697px;
   width:275px;
   height:36px;
 }
@@ -1499,7 +1499,7 @@
 #u100 {
   position:absolute;
   left:1289px;
-  top:740px;
+  top:702px;
   width:18px;
   height:15px;
 }
@@ -1529,8 +1529,8 @@
 }
 #u102 {
   position:absolute;
-  left:1040px;
-  top:654px;
+  left:731px;
+  top:448px;
   width:275px;
   height:36px;
 }
@@ -1557,8 +1557,8 @@
 }
 #u104 {
   position:absolute;
-  left:1288px;
-  top:655px;
+  left:979px;
+  top:449px;
   width:18px;
   height:15px;
 }
@@ -1876,7 +1876,7 @@
 #u126 {
   position:absolute;
   left:1040px;
-  top:694px;
+  top:656px;
   width:275px;
   height:36px;
 }
@@ -1904,7 +1904,7 @@
 #u128 {
   position:absolute;
   left:1294px;
-  top:695px;
+  top:657px;
   width:15px;
   height:15px;
 }
@@ -1925,7 +1925,7 @@
 #u130 {
   position:absolute;
   left:1045px;
-  top:700px;
+  top:662px;
   width:27px;
   height:24px;
 }
@@ -1969,7 +1969,7 @@
 #u134 {
   position:absolute;
   left:1045px;
-  top:740px;
+  top:702px;
   width:63px;
   height:24px;
 }
@@ -2096,8 +2096,8 @@
 }
 #u144 {
   position:absolute;
-  left:1381px;
-  top:799px;
+  left:1040px;
+  top:786px;
   width:275px;
   height:36px;
 }
@@ -2124,8 +2124,8 @@
 }
 #u146 {
   position:absolute;
-  left:1613px;
-  top:802px;
+  left:1272px;
+  top:789px;
   width:39px;
   height:15px;
 }
@@ -2258,7 +2258,7 @@
   width:274px;
   height:36px;
   background:inherit;
-  background-color:rgba(255, 153, 0, 1);
+  background-color:rgba(255, 255, 255, 1);
   box-sizing:border-box;
   border-width:1px;
   border-style:solid;
@@ -2511,7 +2511,7 @@
 #u172 {
   position:absolute;
   left:1040px;
-  top:778px;
+  top:740px;
   width:275px;
   height:36px;
 }
