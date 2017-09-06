@@ -919,7 +919,7 @@
   width:274px;
   height:36px;
   background:inherit;
-  background-color:rgba(255, 0, 0, 1);
+  background-color:rgba(255, 255, 255, 1);
   box-sizing:border-box;
   border-width:1px;
   border-style:solid;
@@ -1300,7 +1300,7 @@
   width:272px;
   height:36px;
   background:inherit;
-  background-color:rgba(255, 153, 0, 1);
+  background-color:rgba(255, 255, 255, 1);
   box-sizing:border-box;
   border-width:1px;
   border-style:solid;
@@ -2085,7 +2085,7 @@
   width:275px;
   height:36px;
   background:inherit;
-  background-color:rgba(255, 153, 0, 1);
+  background-color:rgba(255, 255, 255, 1);
   box-sizing:border-box;
   border-width:1px;
   border-style:solid;
@@ -2215,7 +2215,7 @@
   width:275px;
   height:36px;
   background:inherit;
-  background-color:rgba(255, 153, 0, 1);
+  background-color:rgba(255, 255, 255, 1);
   box-sizing:border-box;
   border-width:1px;
   border-style:solid;
