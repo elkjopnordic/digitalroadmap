@@ -146,7 +146,11 @@
   left:0px;
   top:0px;
   width:294px;
+<<<<<<< HEAD
   height:229px;
+=======
+  height:193px;
+>>>>>>> dda2ef11cf5c13a25f263d43f82dd65c79c7daaa
   background:inherit;
   background-color:rgba(242, 242, 242, 1);
   border:none;
@@ -161,7 +165,11 @@
   left:666px;
   top:212px;
   width:294px;
+<<<<<<< HEAD
   height:229px;
+=======
+  height:193px;
+>>>>>>> dda2ef11cf5c13a25f263d43f82dd65c79c7daaa
 }
 #u4_text {
   border-width:0px;
@@ -335,7 +343,11 @@
 #u9 {
   border-width:0px;
   position:absolute;
+<<<<<<< HEAD
   left:31px;
+=======
+  left:32px;
+>>>>>>> dda2ef11cf5c13a25f263d43f82dd65c79c7daaa
   top:63px;
   width:207px;
   height:36px;
@@ -344,7 +356,11 @@
   border-width:0px;
   position:absolute;
   left:2px;
+<<<<<<< HEAD
   top:3px;
+=======
+  top:2px;
+>>>>>>> dda2ef11cf5c13a25f263d43f82dd65c79c7daaa
   width:203px;
   word-wrap:break-word;
 }
@@ -3768,7 +3784,11 @@
   position:absolute;
   left:0px;
   top:0px;
+<<<<<<< HEAD
   width:334px;
+=======
+  width:346px;
+>>>>>>> dda2ef11cf5c13a25f263d43f82dd65c79c7daaa
   white-space:nowrap;
 }
 #u114_div {
@@ -3909,7 +3929,11 @@
   position:absolute;
   left:0px;
   top:0px;
+<<<<<<< HEAD
   width:76px;
+=======
+  width:29px;
+>>>>>>> dda2ef11cf5c13a25f263d43f82dd65c79c7daaa
   height:16px;
   background:inherit;
   background-color:rgba(255, 255, 255, 0);
@@ -3918,23 +3942,37 @@
   -moz-box-shadow:none;
   -webkit-box-shadow:none;
   box-shadow:none;
+<<<<<<< HEAD
   color:#0000FF;
+=======
+  color:#00CC00;
+>>>>>>> dda2ef11cf5c13a25f263d43f82dd65c79c7daaa
 }
 #u118 {
   border-width:0px;
   position:absolute;
   left:364px;
   top:480px;
+<<<<<<< HEAD
   width:76px;
   height:16px;
   color:#0000FF;
+=======
+  width:29px;
+  height:16px;
+  color:#00CC00;
+>>>>>>> dda2ef11cf5c13a25f263d43f82dd65c79c7daaa
 }
 #u118_text {
   border-width:0px;
   position:absolute;
   left:0px;
   top:0px;
+<<<<<<< HEAD
   width:73px;
+=======
+  width:29px;
+>>>>>>> dda2ef11cf5c13a25f263d43f82dd65c79c7daaa
   white-space:nowrap;
 }
 #u119_div {
@@ -4020,6 +4058,7 @@
   visibility:hidden;
   word-wrap:break-word;
 }
+<<<<<<< HEAD
 #u122_div {
   border-width:0px;
   position:absolute;
@@ -4154,3 +4193,5 @@
   width:271px;
   word-wrap:break-word;
 }
+=======
+>>>>>>> dda2ef11cf5c13a25f263d43f82dd65c79c7daaa
