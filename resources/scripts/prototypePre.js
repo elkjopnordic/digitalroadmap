@@ -1,4 +1,4 @@
-﻿// 8.0.0.3382. Generated 1/14/2019 10:26:32 PM UTC
+﻿// 8.0.0.3388. Generated 7/15/2019 6:13:11 PM UTC
 
 //***** axQuery.js *****//
 $axure = function(query) {
