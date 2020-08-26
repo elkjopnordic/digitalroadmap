@@ -16,7 +16,7 @@
         }
     </script>
 
-    <!-- 8.0.0.3388 -->
+    <!-- 8.0.0.3392 -->
 <script src="resources/scripts/jquery-1.7.1.min.js"></script>
 <script src="resources/scripts/startPre.js"></script>
 <script src="data/document.js"></script>
@@ -87,6 +87,10 @@
             $(window).bind('load', function() {
                 if(CHROME_5_LOCAL && !$('body').attr('pluginDetected')) {
                     window.location = 'resources/chrome/chrome.html';
+                }
+
+                if (FIREFOX && BROWSER_VERSION >= 68 && document.location.href.indexOf('file://') >= 0) { //detecting firefox and local
+                    window.location = 'resources/chrome/firefox.html';
                 }
             });
 
