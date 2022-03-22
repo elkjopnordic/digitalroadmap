@@ -1,4 +1,4 @@
-﻿// 8.0.0.3398. Generated 1/18/2021 11:03:29 PM UTC
+﻿// 8.0.0.3399. Generated 11/17/2021 12:20:57 AM UTC
 
 //***** messagecenter.js *****//
 if (typeof console == 'undefined') console = {
@@ -1003,6 +1003,11 @@ $axure.internal(function($ax) {
                 }
             };
 
+            const isDateTimeTypeInput = function($input) {
+                const type = $input.attr('type');
+                return type == 'date' || type == 'month' || type == 'time';
+            }
+
             // Initialize Placeholders. Right now this is text boxes and text areas.
             // Also, the assuption is being made that these widgets with the placeholder, have no other styles (this may change...)
             var hasPlaceholder = dObj.placeholderText == '' ? true : Boolean(dObj.placeholderText);
@@ -1032,44 +1037,63 @@ $axure.internal(function($ax) {
                     $ax.placeholderManager.updatePlaceholder(inputId, true);
                 });
 
-                if(ANDROID) {
+                // if(ANDROID) {
                     //input fires before keyup, to avoid flicker, supported in ie9 and above
-                    inputJobj.bind('input', function() {
-                        if(!dObj.HideHintOnFocused) { //hide on type
+                inputJobj.bind('input', function() {
+                    if(!dObj.HideHintOnFocused) { //hide on type
                             var id = this.id;
                             var inputIndex = id.indexOf('_input');
                             if(inputIndex == -1) return;
                             var inputId = id.substring(0, inputIndex);
 
-                            if($ax.placeholderManager.isActive(inputId)) {
-                                $ax.placeholderManager.updatePlaceholder(inputId, false, true);
-                            } else if(!$jobj(id).val()) {
-                                $ax.placeholderManager.updatePlaceholder(inputId, true, false);
-                                $ax.placeholderManager.moveCaret(id, 0);
-                            }
-                        }
-                    });
-                } else {
-                    inputJobj.bind('keydown', function() {
-                        if(!dObj.HideHintOnFocused) {
-                            var id = this.id;
-                            var inputIndex = id.indexOf('_input');
-                            if(inputIndex == -1) return;
-                            var inputId = id.substring(0, inputIndex);
+                        var $input = $jobj(id);
+                        var emptyInputValue = !$input.val();
 
-                            if(!$ax.placeholderManager.isActive(inputId)) return;
-                            $ax.placeholderManager.updatePlaceholder(inputId, false, true);
+                        var invalidDateTimeInput = isDateTimeTypeInput($input) && !$input[0].validity.valid;
+                        if ($ax.placeholderManager.isActive(inputId)) {
+                            // clear text if emptyInputValue is true;
+                            $ax.placeholderManager.updatePlaceholder(inputId, false, emptyInputValue);
                         }
-                    }).bind('keyup', function() {
-                        var id = this.id;
-                        var inputIndex = id.indexOf('_input');
-                        if(inputIndex == -1) return;
-                        var inputId = id.substring(0, inputIndex);
-
-                        if($ax.placeholderManager.isActive(inputId)) return;
-                        if(!dObj.HideHintOnFocused && !$jobj(id).val()) {
+                        else if (emptyInputValue && !invalidDateTimeInput) {
                             $ax.placeholderManager.updatePlaceholder(inputId, true);
                             $ax.placeholderManager.moveCaret(id, 0);
+                        }
+                    }
+                });
+                // } else {
+                //     inputJobj.bind('keydown', function() {
+                //         if(!dObj.HideHintOnFocused) {
+                //             var id = this.id;
+                //             var inputIndex = id.indexOf('_input');
+                //             if(inputIndex == -1) return;
+                //             var inputId = id.substring(0, inputIndex);
+
+                //             if(!$ax.placeholderManager.isActive(inputId)) return;
+                //             $ax.placeholderManager.updatePlaceholder(inputId, false, true);
+                //         }
+                //     }).bind('keyup', function() {
+                //         var id = this.id;
+                //         var inputIndex = id.indexOf('_input');
+                //         if(inputIndex == -1) return;
+                //         var inputId = id.substring(0, inputIndex);
+
+                //         if($ax.placeholderManager.isActive(inputId)) return;
+                //         if(!dObj.HideHintOnFocused && !$jobj(id).val()) {
+                //             $ax.placeholderManager.updatePlaceholder(inputId, true);
+                //             $ax.placeholderManager.moveCaret(id, 0);
+                //         }
+                //     });
+                // }
+                if (!ANDROID) {
+                    inputJobj.bind('keydown', function () {
+                        if (!dObj.HideHintOnFocused) {
+                            var id = this.id;
+                            var inputIndex = id.indexOf('_input');
+                            if (inputIndex == -1) return;
+                            var inputId = id.substring(0, inputIndex);
+
+                            if (!$ax.placeholderManager.isActive(inputId)) return;
+                            $ax.placeholderManager.updatePlaceholder(inputId, false, true);
                         }
                     });
                 }
@@ -1780,6 +1804,7 @@ $axure.internal(function($ax) {
     $ax.event.raiseSelectedEvents = _raiseSelectedEvents;
 
     var _raiseSyntheticEvent = function(elementId, eventName, skipShowDescription, eventInfo, nonSynthetic) {
+        if ($ax.style.IsWidgetDisabled(elementId) && _shouldStopOnDisabledWidget(eventName)) return;
         // Empty string used when this is an event directly on the page.
         var dObj = elementId === '' ? $ax.pageData.page : $ax.getObjectFromElementId(elementId);
         var axEventObject = dObj && dObj.interactionMap && dObj.interactionMap[eventName];
@@ -1790,6 +1815,11 @@ $axure.internal(function($ax) {
         _handleEvent(elementId, eventInfo, axEventObject, false, !nonSynthetic);
     };
     $ax.event.raiseSyntheticEvent = _raiseSyntheticEvent;
+
+    var _shouldStopOnDisabledWidget = function (eventName) {
+        var blackList = ["onLongClick"];
+        return blackList.some(x => x === eventName);
+    }
 
     var _hasSyntheticEvent = function(scriptId, eventName) {
         var dObj = $ax.getObjectFromScriptId(scriptId);
